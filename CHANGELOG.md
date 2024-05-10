@@ -5,6 +5,13 @@
 
 > All notable changes to this project will be documented in this file
 
+## 1.0.0 (2024-05-10)
+
+
+### 🍕 Features
+
+* first commit ([f110062](https://github.com/jayjay021/nestjs-cicd-test/commit/f110062af4b267a7aabc135c5a8a0cc41e2ef60e))
+
 ## [2.0.6](https://github.com/jayjay021/nestjs-cicd-test/compare/v2.0.5...v2.0.6) (2024-05-10)
 
 
