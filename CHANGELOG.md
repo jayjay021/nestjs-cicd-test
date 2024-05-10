@@ -5,6 +5,13 @@
 
 > All notable changes to this project will be documented in this file
 
+## [1.1.0](https://github.com/jayjay021/nestjs-cicd-test/compare/v1.0.0...v1.1.0) (2024-05-10)
+
+
+### 🍕 Features
+
+* new big feature \n\n BREAKING CHANGE: it breaks something ([b2100ae](https://github.com/jayjay021/nestjs-cicd-test/commit/b2100ae86ad62bec88b47ea33a3ccb5c5b7e15b9))
+
 ## 1.0.0 (2024-05-10)
 
 
