@@ -5,6 +5,17 @@
 
 > All notable changes to this project will be documented in this file
 
+## [2.0.0](https://github.com/jayjay021/nestjs-cicd-test/compare/v1.1.0...v2.0.0) (2024-05-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* test breaking change
+
+### 🍕 Features
+
+* try cz ([df1fe77](https://github.com/jayjay021/nestjs-cicd-test/commit/df1fe77d31fde46580eeb3c6262fbb1a5b329f45))
+
 ## [1.1.0](https://github.com/jayjay021/nestjs-cicd-test/compare/v1.0.0...v1.1.0) (2024-05-10)
 
 
