@@ -1,0 +1,53 @@
+name: "Semantic release"
+
+on:
+  push:
+    branches:
+      - main
+      - alpha
+      - beta
+      - next
+permissions:
+  contents: write
+  packages: write
+jobs:
+  release:
+    environment:
+      name: production
+      url: https://github.com/${{ github.repository }}/releases/tag/${{ env.RELEASE_TAG }}
+    name: Semantic release
+    runs-on: ubuntu-latest
+    steps:
+      - name: "☁️ checkout repository"
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: "🔧 setup node"
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: "🔧 install npm@latest"
+        run: | 
+          npm i -g npm@latest
+          npm i -g pnpm
+
+      - name: "📦 install dependencies"
+        run: |
+          pnpm install --dev
+
+      - name: "🚀 release"
+        id: release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npx semantic-release
+
+      - name: "echo outputs"
+        run: |
+          echo "RELEASE_TAG: ${{ env.RELEASE_TAG }}"
+          echo "RELEASE_VERSION: ${{ env.RELEASE_VERSION }}"
+          echo "outputs.release-tag: ${{ steps.release.outputs.release-tag }}"
+          echo "outputs.release-version: ${{ steps.release.outputs.release-version }}"
